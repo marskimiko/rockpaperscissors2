@@ -4,17 +4,6 @@ function getComputerChoice() {
   return(options[Math.floor(Math.random()*options.length)]);
 }
 
-// function game() {
-//   playRound()
-//   playRound()
-//   playRound()
-//   playRound()
-//   playRound()
-//   // for (let i = 1; i <= 5; i++) {
-//   //   playRound(i)
-//   // }
-//  }
-
 function getPlayerChoice() {
   let input = prompt('enter rock, paper, or scissors')
   return input;
@@ -36,16 +25,27 @@ function getPlayerChoice() {
 
 function playRound(playerSelection, computerSelection) {
   const result = checkWinner(playerSelection, computerSelection);
-  if(result ==- "Tie") {
-    return 
+  if(result === "tie") {
+    return `it's a tie!`
+  } else if(result === 'player') {
+    return `You win! ${playerSelection} beats ${computerSelection}`
+  } else  {
+    return `You Lose :( ${computerSelection} beats ${playerSelection}`
   }
 }
 
 
-// let playerChoice = getPlayerChoice();
-// let computerChoice = getComputerChoice();
-// console.log('computer choice',computerChoice)
-// console.log('player choice',playerChoice)
+const playerChoice = getPlayerChoice();
+const computerChoice = getComputerChoice();
 
 
-// game()
+console.log(playRound(playerChoice, computerChoice))
+
+
+
+
+function game() {
+  for (let i = 0; i < 5; i++) {
+    playRound(i)
+  }
+ }
