@@ -4,7 +4,7 @@ function getComputerChoice() {
   return(options[Math.floor(Math.random()*options.length)]);
 }
 
-function game(playerSelection, computerSelection) {
+function playRound(playerSelection, computerSelection) {
   if (playerSelection === computerSelection) {
     console.log('tie')
   } else if (
@@ -18,7 +18,11 @@ function game(playerSelection, computerSelection) {
   }
 }
 
-let computerChoice = getComputerChoice();
-let playerChoice = ('rock')
+// let computerChoice = getComputerChoice();
+// let playerChoice = ('rock')
 
-game(playerChoice, computerChoice)
+// game(playerChoice, computerChoice)
+
+function game() {
+  
+}
