@@ -4,25 +4,48 @@ function getComputerChoice() {
   return(options[Math.floor(Math.random()*options.length)]);
 }
 
-function playRound(playerSelection, computerSelection) {
+// function game() {
+//   playRound()
+//   playRound()
+//   playRound()
+//   playRound()
+//   playRound()
+//   // for (let i = 1; i <= 5; i++) {
+//   //   playRound(i)
+//   // }
+//  }
+
+function getPlayerChoice() {
+  let input = prompt('enter rock, paper, or scissors')
+  return input;
+}
+
+ function checkWinner(playerSelection, computerSelection) {
   if (playerSelection === computerSelection) {
-    console.log('tie')
+    return 'tie';
   } else if (
     (playerSelection === 'rock' && computerSelection === 'scissors') ||
     (playerSelection === 'paper' && computerSelection === 'rock') ||
     (playerSelection === 'scissors' && computerSelection === 'paper')
   ) {
-    console.log ('player')
+    return 'player';
   } else {
-    console.log('computer')
+    return 'computer';
   }
 }
 
-// let computerChoice = getComputerChoice();
-// let playerChoice = ('rock')
-
-// game(playerChoice, computerChoice)
-
-function game() {
-  
+function playRound(playerSelection, computerSelection) {
+  const result = checkWinner(playerSelection, computerSelection);
+  if(result ==- "Tie") {
+    return 
+  }
 }
+
+
+// let playerChoice = getPlayerChoice();
+// let computerChoice = getComputerChoice();
+// console.log('computer choice',computerChoice)
+// console.log('player choice',playerChoice)
+
+
+// game()
