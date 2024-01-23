@@ -5,8 +5,20 @@ function getComputerChoice() {
 }
 
 function getPlayerChoice() {
-  let input = prompt('enter rock, paper, or scissors');
-  return input;
+  let validatedInput = false;
+
+  while(validatedInput === false) {
+    const input = prompt('enter rock, paper, or scissors');
+    if (input === null) {
+      continue;
+    } else {
+     const lowerCaseInput = input.toLowerCase();  
+     if (options.includes(lowerCaseInput)) {
+      validatedInput = true;
+      return lowerCaseInput;
+     }
+    }
+  }
 }
 
  function checkWinner(playerSelection, computerSelection) {
