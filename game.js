@@ -47,25 +47,26 @@ function playRound(playerSelection, computerSelection) {
 }
 
 function game() {
-  let scorePlayer = 0;
-  let scoreComputer = 0;
+  let playerScore = 0;
+  let computerScore = 0;
   for (let i = 0; i < 5; i++) {
     const playerSelection = getPlayerChoice();
     const computerSelection = getComputerChoice();
     console.log(playRound(playerSelection, computerSelection));
 
     if(checkWinner(playerSelection, computerSelection) === "player") {
-      scorePlayer++;
+      playerScore++;
     } else if (checkWinner(playerSelection, computerSelection) === "computer") {
-      scoreComputer++;
+      computerScore++;
     }
   }
   console.log("game over")
+  console.log('--------------------------------------------------------')
 
-  if (scorePlayer > scoreComputer) {
+  if (playerScore > computerScore) {
     console.log('you won the whole game');
   } else {
-    console.log('you lost the computer won the entire game!')
+    console.log('you lost the computer won the entire game :(')
   }
 }
 
