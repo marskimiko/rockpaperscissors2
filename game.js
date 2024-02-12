@@ -46,28 +46,28 @@ function playRound(playerSelection, computerSelection) {
   }
 }
 
-function game() {
-  let playerScore = 0;
-  let computerScore = 0;
-  for (let i = 0; i < 5; i++) {
-    const playerSelection = getPlayerChoice();
-    const computerSelection = getComputerChoice();
-    console.log(playRound(playerSelection, computerSelection));
+// function game() {
+//   let playerScore = 0;
+//   let computerScore = 0;
+//   for (let i = 0; i < 5; i++) {
+//     const playerSelection = getPlayerChoice();
+//     const computerSelection = getComputerChoice();
+//     console.log(playRound(playerSelection, computerSelection));
 
-    if(checkWinner(playerSelection, computerSelection) === "player") {
-      playerScore++;
-    } else if (checkWinner(playerSelection, computerSelection) === "computer") {
-      computerScore++;
-    }
-  }
-  console.log("game over")
-  console.log('--------------------------------------------------------')
+//     if(checkWinner(playerSelection, computerSelection) === "player") {
+//       playerScore++;
+//     } else if (checkWinner(playerSelection, computerSelection) === "computer") {
+//       computerScore++;
+//     }
+//   }
+//   console.log("game over")
+//   console.log('--------------------------------------------------------')
 
-  if (playerScore > computerScore) {
-    console.log('you won the whole game');
-  } else {
-    console.log('you lost the computer won the entire game :(')
-  }
-}
+//   if (playerScore > computerScore) {
+//     console.log('you won the whole game');
+//   } else {
+//     console.log('you lost the computer won the entire game :(')
+//   }
+// }
 
 game()
